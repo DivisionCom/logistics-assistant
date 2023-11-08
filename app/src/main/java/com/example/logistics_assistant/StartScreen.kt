@@ -12,7 +12,7 @@ class StartScreen : AppCompatActivity() {
         setContentView(R.layout.activity_start_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,8 +16,8 @@
         tools:targetApi="31">
         <activity
             android:name=".StartScreen"
-            android:theme="@style/Base.Theme.Logisticsassistant"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Base.Theme.Logisticsassistant">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,9 +25,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".AuthActivity"/>
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
     </application>
 
 </manifest>
