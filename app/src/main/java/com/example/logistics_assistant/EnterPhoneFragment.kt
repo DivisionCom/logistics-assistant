@@ -1,5 +1,8 @@
 package com.example.logistics_assistant
 
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -32,11 +35,25 @@ class EnterPhoneFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupPhoneSample()
         goNext()
+        val btn = binding.btnContinue
+        btn.isEnabled = false
+        changeBtnColors(btn.isEnabled)
     }
 
     private fun goNext(){
         binding.btnContinue.setOnClickListener {
             findNavController().navigate(R.id.action_enterPhoneFragment_to_enterPasswordFragment)
+        }
+    }
+
+    private fun changeBtnColors(enabled: Boolean){
+        val btn = binding.btnContinue
+        if(!enabled){
+            btn.setBackgroundColor(resources.getColor(R.color.btnDisBack))
+            btn.setTextColor(resources.getColor(R.color.btnDisText))
+        } else {
+            btn.setBackgroundColor(resources.getColor(R.color.mainBlack))
+            btn.setTextColor(resources.getColor(R.color.white))
         }
     }
 
@@ -52,7 +69,9 @@ class EnterPhoneFragment : Fragment() {
                     formattedValue: String,
                     tailPlaceholder: String
                 ) {
-
+                    val btn = binding.btnContinue
+                    btn.isEnabled = maskFilled
+                    changeBtnColors(btn.isEnabled)
                 }
             }
         )

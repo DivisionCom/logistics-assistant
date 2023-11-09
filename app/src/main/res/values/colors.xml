@@ -4,5 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="mainBlack">#2B2D35</color>
     <color name="secondaryBlack">#3C4049</color>
+    <color name="btnDisBack">#EAEEF4</color>
+    <color name="btnDisText">#B8C4DB</color>
+    <color name="error">#F0303F</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#2B2D35</color>
 </resources>

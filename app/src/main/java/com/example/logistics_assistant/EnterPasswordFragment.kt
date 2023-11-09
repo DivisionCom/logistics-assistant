@@ -1,5 +1,6 @@
 package com.example.logistics_assistant
 
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 
+const val PASSWORD = "123456"
 class EnterPasswordFragment : Fragment() {
 
     private lateinit var binding: FragmentPasswordBinding
@@ -31,7 +33,47 @@ class EnterPasswordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         goBack()
+        disableBtn()
+        validating()
+        binding.btnContinue.setOnClickListener{
+            if(checkPassword()){
+                // go to next activity
+            } else {
+                binding.layoutPassword.boxStrokeColor = resources.getColor(R.color.error)
+                binding.tvError.visibility = View.VISIBLE
+                disableBtn()
+            }
+        }
+    }
 
+    private fun checkPassword() : Boolean{
+        val text = binding.etPassword.text.toString()
+        return text == PASSWORD
+    }
+
+    private fun validating(){
+        binding.etPassword.doOnTextChanged { _, _, _, _ ->
+            val text = binding.etPassword.text
+            if(text!!.length < 6){
+                disableBtn()
+            } else {
+                enableBtn()
+            }
+        }
+    }
+
+    private fun disableBtn(){
+        val btn = binding.btnContinue
+        btn.isEnabled = false
+        btn.setBackgroundColor(resources.getColor(R.color.btnDisBack))
+        btn.setTextColor(resources.getColor(R.color.btnDisText))
+    }
+
+    private fun enableBtn(){
+        val btn = binding.btnContinue
+        btn.isEnabled = true
+        btn.setBackgroundColor(resources.getColor(R.color.mainBlack))
+        btn.setTextColor(resources.getColor(R.color.white))
     }
 
     private fun goBack(){
