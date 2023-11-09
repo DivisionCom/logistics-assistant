@@ -1,5 +1,6 @@
 package com.example.logistics_assistant
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -37,7 +38,9 @@ class EnterPasswordFragment : Fragment() {
         validating()
         binding.btnContinue.setOnClickListener{
             if(checkPassword()){
-                // go to next activity
+                val intent = Intent (activity, MainActivity::class.java)
+                activity?.startActivity(intent)
+                activity?.finish()
             } else {
                 binding.layoutPassword.boxStrokeColor = resources.getColor(R.color.error)
                 binding.tvError.visibility = View.VISIBLE
@@ -79,7 +82,6 @@ class EnterPasswordFragment : Fragment() {
     private fun goBack(){
         binding.ibBack.setOnClickListener {
             findNavController().navigate(R.id.action_enterPasswordFragment_to_enterPhoneFragment)
-            Log.d("MyTag", "Pass: ${binding.etPassword.text}")
         }
     }
 
