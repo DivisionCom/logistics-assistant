@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.logistics_assistant.main.MainActivity
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
+import com.example.logistics_assistant.main.MenuActivity
 
 const val PASSWORD = "123456"
 class EnterPasswordFragment : Fragment() {
@@ -35,7 +36,7 @@ class EnterPasswordFragment : Fragment() {
         validating()
         binding.btnContinue.setOnClickListener{
             if(checkPassword()){
-                val intent = Intent (activity, MainActivity::class.java)
+                val intent = Intent (activity, MenuActivity::class.java)
                 activity?.startActivity(intent)
                 activity?.finish()
             } else {

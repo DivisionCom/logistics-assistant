@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Logisticsassistant"
         tools:targetApi="31">
         <activity
+            android:name=".main.MenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".splash.StartScreen"
             android:exported="true"
             android:theme="@style/Base.Theme.Logisticsassistant">
@@ -24,11 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".auth.AuthActivity"/>
+        <activity android:name=".auth.AuthActivity" />
         <activity
             android:name=".main.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
