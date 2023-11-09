@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.logistics_assistant.MainActivity
+import com.example.logistics_assistant.main.MainActivity
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
 
