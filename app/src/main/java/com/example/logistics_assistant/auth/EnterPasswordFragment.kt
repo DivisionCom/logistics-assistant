@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.logistics_assistant.MainViewModel
 import com.example.logistics_assistant.main.MainActivity
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
@@ -17,6 +20,7 @@ const val PASSWORD = "123456"
 class EnterPasswordFragment : Fragment() {
 
     private lateinit var binding: FragmentPasswordBinding
+    private val model: MainViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -37,10 +41,11 @@ class EnterPasswordFragment : Fragment() {
         binding.btnContinue.setOnClickListener{
             if(checkPassword()){
                 val intent = Intent (activity, MenuActivity::class.java)
+                intent.putExtra("save_phone", model.liveDataCurrent.value?.phone)
                 activity?.startActivity(intent)
                 activity?.finish()
             } else {
-                binding.layoutPassword.boxStrokeColor = resources.getColor(R.color.error)
+                binding.layoutPassword.boxStrokeColor = ResourcesCompat.getColor(resources, R.color.error, null)
                 binding.tvError.visibility = View.VISIBLE
                 disableBtn()
             }

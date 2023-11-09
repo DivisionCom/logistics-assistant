@@ -1,10 +1,9 @@
 package com.example.logistics_assistant.main
 
 import android.graphics.drawable.Drawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.ActivityMenuBinding
@@ -27,6 +26,11 @@ class MenuActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.myToolbar)
     }
+
+    fun userPhone(): String{
+        return intent.getStringExtra("save_phone").toString()
+    }
+
 
     fun setLogoBar(photo: Drawable?){
         supportActionBar?.setDisplayUseLogoEnabled(true)

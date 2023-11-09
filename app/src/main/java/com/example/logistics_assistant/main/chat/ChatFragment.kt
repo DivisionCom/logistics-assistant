@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.example.logistics_assistant.R
@@ -30,7 +29,7 @@ class ChatFragment : Fragment() {
         createUserAndSetHeader()
     }
 
-    private fun createUserAndSetHeader(): User{
+    private fun createUserAndSetHeader(): User {
         val user = User(
             name = "Антонов Антон Антонович",
             photo = ResourcesCompat.getDrawable(resources, R.drawable.antonov, null)
