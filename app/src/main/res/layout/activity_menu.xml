@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:background="?android:attr/windowBackground"
         app:backgroundTint="#FFFFFF"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

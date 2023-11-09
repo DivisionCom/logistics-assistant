@@ -9,5 +9,9 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
 
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/white</item>
+    </style>
+
     <style name="Theme.Logisticsassistant" parent="Base.Theme.Logisticsassistant" />
 </resources>
