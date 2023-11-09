@@ -8,6 +8,7 @@
     <string name="previous">Previous</string>
 
     <string name="title_graphs">Графики</string>
+    <string name="title_graphs_tb">График смен</string>
     <string name="title_tasks">Задания</string>
     <string name="title_chat">Чат</string>
     <string name="title_profile">Профиль</string>

@@ -6,11 +6,19 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
 
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/white</item>
     </style>
 
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:fontFamily">@font/stolzl_regular</item>
+    </style>
+
+    <style name="Stolzl" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/stolzl_regular</item>
     </style>
 
     <style name="Theme.Logisticsassistant" parent="Base.Theme.Logisticsassistant" />

@@ -1,5 +1,6 @@
 package com.example.logistics_assistant.main
 
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
@@ -23,5 +24,17 @@ class MenuActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment_activity_menu)
         navView.setupWithNavController(navController)
+
+        setSupportActionBar(binding.myToolbar)
+    }
+
+    fun setLogoBar(photo: Drawable?){
+        supportActionBar?.setDisplayUseLogoEnabled(true)
+        supportActionBar?.setLogo(photo)
+    }
+
+    fun unsetLogoBar(){
+        supportActionBar?.setDisplayUseLogoEnabled(false)
+        supportActionBar?.subtitle = null
     }
 }

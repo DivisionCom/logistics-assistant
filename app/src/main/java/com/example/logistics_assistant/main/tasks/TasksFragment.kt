@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentTasksBinding
+import com.example.logistics_assistant.main.MenuActivity
 
 class TasksFragment : Fragment() {
 
@@ -22,6 +24,7 @@ class TasksFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        (activity as MenuActivity?)?.unsetLogoBar()
+        activity?.title = resources.getString(R.string.title_tasks)
     }
 }
