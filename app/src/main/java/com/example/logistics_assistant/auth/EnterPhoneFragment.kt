@@ -1,19 +1,15 @@
-package com.example.logistics_assistant
+package com.example.logistics_assistant.auth
 
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.PorterDuff
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPhoneBinding
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 import com.redmadrobot.inputmask.MaskedTextChangedListener.Companion.installOn
-import com.redmadrobot.inputmask.PhoneInputListener
 
 
 class EnterPhoneFragment : Fragment() {

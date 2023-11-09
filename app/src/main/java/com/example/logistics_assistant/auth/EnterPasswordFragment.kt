@@ -1,19 +1,16 @@
-package com.example.logistics_assistant
+package com.example.logistics_assistant.auth
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.logistics_assistant.MainActivity
+import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
-import com.redmadrobot.inputmask.MaskedTextChangedListener
 
 const val PASSWORD = "123456"
 class EnterPasswordFragment : Fragment() {

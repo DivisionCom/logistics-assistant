@@ -1,4 +1,4 @@
-package com.example.logistics_assistant
+package com.example.logistics_assistant.auth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
