@@ -1,9 +1,11 @@
 package com.example.logistics_assistant.main.chat
 
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,13 +50,20 @@ class ChatFragment : Fragment() {
             rvChat.adapter = adapter
             ibMessageSend.setOnClickListener{
                 val mes = ChatMessage(
-                    message = binding.etMessage.text.toString(),
+                    message = etMessage.text.toString(),
                     senderId = null,
                     receiverId = "1"
                 )
                 adapter.addMessage(mes)
+                etMessage.text = null
+                hideKeyBoard()
             }
         }
+    }
+
+    private fun hideKeyBoard(){
+        val imm = requireActivity().getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(requireView().windowToken, 0)
     }
 
     private fun setMessages(){
