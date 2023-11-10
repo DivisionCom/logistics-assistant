@@ -1,239 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".main.profile.ProfileFragment">
+    android:layout_height="wrap_content"
+    android:paddingBottom="90dp">
 
-    <LinearLayout
-        android:id="@+id/userMainInfo"
-        android:layout_width="0dp"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:context=".main.profile.ProfileFragment">
 
-        <ImageView
-            android:id="@+id/ivUserPhoto"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/userMainInfo"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/user" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tvUserName"
-            android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/ivUserPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:gravity="center_horizontal"
+                android:text="Петров Иван Алексеевич"
+                android:textColor="@color/mainBlack"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvUserJob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:gravity="center_horizontal"
+                android:text="Водитель"
+                android:textColor="@color/secondaryBlack"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userSecondaryInfo"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:gravity="center_horizontal"
-            android:text="Петров Иван Алексеевич"
-            android:textColor="@color/mainBlack"
-            android:textSize="19sp" />
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userMainInfo">
 
-        <TextView
-            android:id="@+id/tvUserJob"
-            android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvLabelPersNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="@string/label_persNum"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvPersNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="1111"
+                android:textColor="@color/mainBlack"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvLabelPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="@string/label_phone"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="+7 (999) 000-00-00"
+                android:textColor="@color/mainBlack"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvLabelCitizenship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="@string/label_citizenship"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvCitizenship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="РФ"
+                android:textColor="@color/mainBlack"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvLabelCarType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="@string/label_carType"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvCarType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="Грузовая"
+                android:textColor="@color/mainBlack"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tvLabelCarNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="@string/label_carNum"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvCarNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="А 000 АА 199"
+                android:textColor="@color/mainBlack"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutNotifications"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:gravity="center_horizontal"
-            android:text="Водитель"
-            android:textColor="@color/secondaryBlack"
-            android:textSize="17sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userSecondaryInfo">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnNotifications"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/stolzl_regular"
+                android:paddingLeft="16dp"
+                android:paddingTop="0dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="0dp"
+                android:shadowRadius="0"
+                android:text="Оповещения"
+                android:textAlignment="textStart"
+                android:textColor="@color/mainBlack"
+                android:textSize="17sp"
+                app:icon="@drawable/arrow_right"
+                app:iconGravity="end"
+                app:iconSize="28dp"
+                app:iconTint="@color/mainBlack" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/userSecondaryInfo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userMainInfo">
-
-        <TextView
-            android:id="@+id/tvLabelPersNum"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/layoutExit"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="@string/label_persNum"
-            android:textColor="@color/gray" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutNotifications">
 
-        <TextView
-            android:id="@+id/tvPersNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="1111"
-            android:textColor="@color/mainBlack"
-            android:textSize="17sp" />
+            <Button
+                android:id="@+id/btnExit"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/stolzl_regular"
+                android:paddingLeft="16dp"
+                android:paddingTop="0dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="0dp"
+                android:shadowRadius="0"
+                android:text="Выйти"
+                android:textAlignment="textStart"
+                android:textColor="@color/error"
+                android:textSize="17sp"
+                app:icon="@drawable/arrow_right"
+                app:iconGravity="end"
+                app:iconSize="28dp"
+                app:iconTint="#F31313" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvLabelPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="@string/label_phone"
-            android:textColor="@color/gray" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/tvPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="+7 (999) 000-00-00"
-            android:textColor="@color/mainBlack"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/tvLabelCitizenship"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="@string/label_citizenship"
-            android:textColor="@color/gray" />
-
-        <TextView
-            android:id="@+id/tvCitizenship"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="РФ"
-            android:textColor="@color/mainBlack"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/tvLabelCarType"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="@string/label_carType"
-            android:textColor="@color/gray" />
-
-        <TextView
-            android:id="@+id/tvCarType"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="Грузовая"
-            android:textColor="@color/mainBlack"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/tvLabelCarNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="@string/label_carNum"
-            android:textColor="@color/gray" />
-
-        <TextView
-            android:id="@+id/tvCarNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/stolzl_regular"
-            android:text="А 000 АА 199"
-            android:textColor="@color/mainBlack"
-            android:textSize="17sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutNotifications"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userSecondaryInfo">
-
-        <Button
-            android:id="@+id/btnNotifications"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/stolzl_regular"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp"
-            android:shadowRadius="0"
-            android:text="Оповещения"
-            android:textAlignment="textStart"
-            android:textColor="@color/mainBlack"
-            android:textSize="17sp"
-            app:icon="@drawable/arrow_right"
-            app:iconGravity="end"
-            app:iconSize="28dp"
-            app:iconTint="@color/mainBlack" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutExit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutNotifications">
-
-        <Button
-            android:id="@+id/btnExit"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/stolzl_regular"
-            android:paddingLeft="16dp"
-            android:paddingTop="0dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="0dp"
-            android:shadowRadius="0"
-            android:text="Выйти"
-            android:textAlignment="textStart"
-            android:textColor="@color/error"
-            android:textSize="17sp"
-            app:icon="@drawable/arrow_right"
-            app:iconGravity="end"
-            app:iconSize="28dp"
-            app:iconTint="#F31313" />
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="83dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
