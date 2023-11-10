@@ -29,10 +29,12 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as MenuActivity?)?.unsetLogoBar()
         activity?.title = resources.getString(R.string.title_profile)
-        val user = User(
-            phone = (activity as MenuActivity?)?.userPhone()
-        )
-        model.liveDataCurrent.value = user
-        Log.d("MyLog", user.phone.toString())
+        fillUserPhone()
+    }
+
+    private fun fillUserPhone(){
+        if(model.liveDataCurrent.value?.phone != "null") {
+            binding.tvPhone.text = model.liveDataCurrent.value?.phone
+        }
     }
 }

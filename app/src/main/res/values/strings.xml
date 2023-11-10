@@ -13,6 +13,12 @@
     <string name="title_chat">Чат</string>
     <string name="title_profile">Профиль</string>
 
+    <string name="label_persNum">Табельный №</string>
+    <string name="label_phone">Номер телефона</string>
+    <string name="label_citizenship">Гражданство</string>
+    <string name="label_carType">Машина</string>
+    <string name="label_carNum">Номера</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
