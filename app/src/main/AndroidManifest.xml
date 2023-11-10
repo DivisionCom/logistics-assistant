@@ -17,21 +17,21 @@
         <activity
             android:name=".main.MenuActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".splash.StartScreen"
-            android:exported="true"
-            android:theme="@style/Base.Theme.Logisticsassistant">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".splash.StartScreen"
+            android:exported="true"
+            android:theme="@style/Base.Theme.Logisticsassistant">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".auth.AuthActivity" />
         <activity
