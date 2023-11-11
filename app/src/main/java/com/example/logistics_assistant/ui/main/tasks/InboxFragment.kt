@@ -25,4 +25,8 @@ class InboxFragment : Fragment() {
 
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = InboxFragment()
+    }
 }
