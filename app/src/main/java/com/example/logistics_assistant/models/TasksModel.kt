@@ -11,5 +11,5 @@ data class TasksModel(
     val datePlaceA: String,
     val timePlaceA: String,
     val datePlaceB: String,
-    val timePlaceB: String,
+    val timePlaceB: String
 )
