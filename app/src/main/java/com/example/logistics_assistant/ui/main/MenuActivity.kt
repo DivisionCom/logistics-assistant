@@ -1,16 +1,13 @@
 package com.example.logistics_assistant.ui.main
 
-import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.ActivityMenuBinding
-import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuActivity : AppCompatActivity() {
