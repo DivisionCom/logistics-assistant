@@ -41,7 +41,7 @@
                 android:gravity="center_horizontal"
                 android:text="Петров Иван Алексеевич"
                 android:textColor="@color/mainBlack"
-                android:textSize="19sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvUserJob"
@@ -52,7 +52,7 @@
                 android:gravity="center_horizontal"
                 android:text="Водитель"
                 android:textColor="@color/secondaryBlack"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -77,7 +77,8 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/stolzl_regular"
                 android:text="@string/label_persNum"
-                android:textColor="@color/gray" />
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvPersNum"
@@ -87,7 +88,7 @@
                 android:fontFamily="@font/stolzl_regular"
                 android:text="1111"
                 android:textColor="@color/mainBlack"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvLabelPhone"
@@ -96,7 +97,8 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/stolzl_regular"
                 android:text="@string/label_phone"
-                android:textColor="@color/gray" />
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvPhone"
@@ -106,7 +108,7 @@
                 android:fontFamily="@font/stolzl_regular"
                 android:text="+7 (999) 000-00-00"
                 android:textColor="@color/mainBlack"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvLabelCitizenship"
@@ -115,7 +117,8 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/stolzl_regular"
                 android:text="@string/label_citizenship"
-                android:textColor="@color/gray" />
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvCitizenship"
@@ -125,7 +128,7 @@
                 android:fontFamily="@font/stolzl_regular"
                 android:text="РФ"
                 android:textColor="@color/mainBlack"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvLabelCarType"
@@ -134,7 +137,8 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/stolzl_regular"
                 android:text="@string/label_carType"
-                android:textColor="@color/gray" />
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvCarType"
@@ -144,7 +148,7 @@
                 android:fontFamily="@font/stolzl_regular"
                 android:text="Грузовая"
                 android:textColor="@color/mainBlack"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvLabelCarNum"
@@ -153,7 +157,8 @@
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/stolzl_regular"
                 android:text="@string/label_carNum"
-                android:textColor="@color/gray" />
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvCarNum"
@@ -162,7 +167,7 @@
                 android:fontFamily="@font/stolzl_regular"
                 android:text="А 000 АА 199"
                 android:textColor="@color/mainBlack"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -193,7 +198,7 @@
                 android:text="Оповещения"
                 android:textAlignment="textStart"
                 android:textColor="@color/mainBlack"
-                android:textSize="17sp"
+                android:textSize="14sp"
                 app:icon="@drawable/arrow_right"
                 app:iconGravity="end"
                 app:iconSize="28dp"
@@ -228,7 +233,7 @@
                 android:text="Выйти"
                 android:textAlignment="textStart"
                 android:textColor="@color/error"
-                android:textSize="17sp"
+                android:textSize="14sp"
                 app:icon="@drawable/arrow_right"
                 app:iconGravity="end"
                 app:iconSize="28dp"
