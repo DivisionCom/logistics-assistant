@@ -42,7 +42,13 @@ class ChatFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         createUserAndSetHeader()
         setMessages()
+        (activity as MenuActivity?)?.setChatNotifications(1)
         init()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        (activity as MenuActivity?)?.setChatNotifications(0)
     }
 
     private fun init(){
@@ -57,6 +63,7 @@ class ChatFragment : Fragment() {
                 adapter.addMessage(mes)
                 etMessage.text = null
                 hideKeyBoard()
+                (activity as MenuActivity?)?.setChatNotifications(0)
             }
         }
     }
