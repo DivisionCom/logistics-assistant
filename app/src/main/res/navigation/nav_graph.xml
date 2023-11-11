@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/enterPhoneFragment"
-        android:name="com.example.logistics_assistant.auth.EnterPhoneFragment"
+        android:name="com.example.logistics_assistant.ui.auth.EnterPhoneFragment"
         tools:layout="@layout/fragment_phone">
         <action
             android:id="@+id/action_enterPhoneFragment_to_enterPasswordFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/enterPasswordFragment"
-        android:name="com.example.logistics_assistant.auth.EnterPasswordFragment"
+        android:name="com.example.logistics_assistant.ui.auth.EnterPasswordFragment"
         tools:layout="@layout/fragment_password">
         <action
             android:id="@+id/action_enterPasswordFragment_to_enterPhoneFragment"

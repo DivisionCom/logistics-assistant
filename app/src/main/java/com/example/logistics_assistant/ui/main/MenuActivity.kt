@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.main
+package com.example.logistics_assistant.ui.main
 
 import android.content.res.Resources
 import android.graphics.drawable.Drawable

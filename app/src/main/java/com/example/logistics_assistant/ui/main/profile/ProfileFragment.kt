@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.main.profile
+package com.example.logistics_assistant.ui.main.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.activityViewModels
 import com.example.logistics_assistant.models.MainViewModel
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentProfileBinding
-import com.example.logistics_assistant.main.MenuActivity
+import com.example.logistics_assistant.ui.main.MenuActivity
 
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding

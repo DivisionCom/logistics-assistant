@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.main.chat
+package com.example.logistics_assistant.ui.main.chat
 
 import android.graphics.drawable.Drawable
 

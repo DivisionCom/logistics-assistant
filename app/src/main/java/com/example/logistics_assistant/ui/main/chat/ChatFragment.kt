@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.main.chat
+package com.example.logistics_assistant.ui.main.chat
 
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.adapters.ChatAdapter
 import com.example.logistics_assistant.databinding.FragmentChatBinding
-import com.example.logistics_assistant.main.MenuActivity
+import com.example.logistics_assistant.ui.main.MenuActivity
 import com.example.logistics_assistant.models.ChatMessage
 
 

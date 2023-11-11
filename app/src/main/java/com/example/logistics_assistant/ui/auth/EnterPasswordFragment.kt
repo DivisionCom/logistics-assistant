@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.auth
+package com.example.logistics_assistant.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.logistics_assistant.models.MainViewModel
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
-import com.example.logistics_assistant.main.MenuActivity
+import com.example.logistics_assistant.ui.main.MenuActivity
 
 const val PASSWORD = "123456"
 class EnterPasswordFragment : Fragment() {
