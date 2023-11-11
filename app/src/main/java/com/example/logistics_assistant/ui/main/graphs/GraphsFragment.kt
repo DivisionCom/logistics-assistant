@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -100,7 +102,7 @@ class GraphsFragment() : Fragment(), CalendarAdapter.OnItemListener {
     }
 
     override fun onItemClick(position: Int, dayText: String?) {
-
+        Toast.makeText(context, "Функция пока недоступна", Toast.LENGTH_SHORT).show()
     }
 
 
