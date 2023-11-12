@@ -1,12 +1,9 @@
 package com.example.logistics_assistant.adapters
 
-import android.content.res.Resources
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +14,6 @@ import com.example.logistics_assistant.models.TasksModel
 class TasksAdapter(): ListAdapter<TasksModel, TasksAdapter.Holder>(Comparator()) {
     class Holder(view: View): RecyclerView.ViewHolder(view) {
         val binding = ItemContainerTaskBinding.bind(view)
-
         fun bind(item: TasksModel) = with(binding){
             tvTask.text = item.taskNum
             tvPrice.text = item.price
