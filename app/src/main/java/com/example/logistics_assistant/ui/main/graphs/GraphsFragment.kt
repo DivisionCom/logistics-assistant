@@ -14,11 +14,13 @@ import com.example.logistics_assistant.R
 import com.example.logistics_assistant.adapters.CalendarAdapter
 import com.example.logistics_assistant.databinding.FragmentGraphsBinding
 import com.example.logistics_assistant.ui.main.MenuActivity
+import dagger.hilt.android.AndroidEntryPoint
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
+@AndroidEntryPoint
 class GraphsFragment() : Fragment(), CalendarAdapter.OnItemListener {
 
     private lateinit var binding: FragmentGraphsBinding

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvCurrentTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/stolzl_regular"
+            android:text="Задание № 003"
+            android:textColor="@color/mainBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCurrentPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/stolzl_regular"
+            android:text="30 000,00 ₽"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/mainBlack"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/tvCurrentDateOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/stolzl_regular"
+            android:text="11.08.2023"
+            android:textColor="@color/secondaryBlack"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/time_ellipse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:srcCompat="@drawable/time_ellipse" />
+
+        <TextView
+            android:id="@+id/tvCurrentTimeOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/stolzl_regular"
+            android:text="12:00"
+            android:textColor="@color/secondaryBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvCurrentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/stolzl_regular"
+            android:paddingRight="8dp"
+            android:text="Новое"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/green" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/tvCurrentPlaceA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/stolzl_regular"
+            android:text="Машиностроительная улица, 91"
+            android:textColor="@color/mainBlack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCurrentDatePlaceA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="12.08.2023"
+                android:textColor="#6A7B94"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/time_ellipse2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                app:srcCompat="@drawable/time_ellipse" />
+
+            <TextView
+                android:id="@+id/tvCurrentTimePlaceA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="12:00"
+                android:textColor="#6A7B94"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCurrentPlaceB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/stolzl_regular"
+            android:text="Магистральная улица, 52"
+            android:textColor="@color/mainBlack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCurrentDatePlaceB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="13.08.2023"
+                android:textColor="#6A7B94"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/time_ellipse3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                app:srcCompat="@drawable/time_ellipse" />
+
+            <TextView
+                android:id="@+id/tvCurrentTimePlaceB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/stolzl_regular"
+                android:text="13:00"
+                android:textColor="#6A7B94"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMarkCompleted"
+        style="@style/ShapeAppearanceOverlay.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/mainBlack"
+        android:fontFamily="@font/stolzl_regular"
+        android:padding="16dp"
+        android:text="Отметить задание выполненным"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

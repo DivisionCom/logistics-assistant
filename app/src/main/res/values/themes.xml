@@ -26,5 +26,14 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="StatisticsDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/background_rounded_corners</item>
+        <item name="android:windowMinWidthMajor">50%</item>
+        <item name="android:windowMinWidthMinor">50%</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
     <style name="Theme.Logisticsassistant" parent="Base.Theme.Logisticsassistant" />
 </resources>

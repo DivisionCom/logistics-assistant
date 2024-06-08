@@ -13,4 +13,9 @@
     <color name="pink">#C649F2</color>
     <color name="yellow">#FAB020</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#2B2D35</color>
+
+    <color name="progress_low">#FF0000</color> <!-- Red for low progress -->
+    <color name="progress_medium">#FFA500</color> <!-- Orange for medium progress -->
+    <color name="progress_high">#FFFF00</color> <!-- Yellow for high progress -->
+    <color name="progress_full">#00FF00</color> <!-- Green for full progress -->
 </resources>

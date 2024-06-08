@@ -9,7 +9,11 @@
         android:id="@+id/navigation_tasks"
         android:name="com.example.logistics_assistant.ui.main.tasks.TasksFragment"
         android:label="@string/title_tasks"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/fragment_tasks">
+        <action
+            android:id="@+id/action_navigation_tasks_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_graphs"
@@ -28,4 +32,17 @@
         android:name="com.example.logistics_assistant.ui.main.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.example.logistics_assistant.ui.main.tasks.TaskDetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/fragment_task_detail">
+        <argument
+            android:name="taskId"
+            app:argType="integer" />
+        <argument
+            android:name="taskStatus"
+            app:argType="string" />
+    </fragment>
 </navigation>

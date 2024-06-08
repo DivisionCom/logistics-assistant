@@ -1,6 +1,6 @@
 package com.example.logistics_assistant.models
 
-data class TasksModel(
+data class TasksModel2(
     val taskNum: String,
     val price: String,
     val dateTask: String,

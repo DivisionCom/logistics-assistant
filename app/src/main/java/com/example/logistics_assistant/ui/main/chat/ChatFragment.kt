@@ -12,10 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.adapters.ChatAdapter
 import com.example.logistics_assistant.databinding.FragmentChatBinding
-import com.example.logistics_assistant.ui.main.MenuActivity
 import com.example.logistics_assistant.models.ChatMessage
+import com.example.logistics_assistant.ui.main.MenuActivity
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ChatFragment : Fragment() {
 
     private lateinit var binding: FragmentChatBinding
@@ -25,14 +26,11 @@ class ChatFragment : Fragment() {
         "Да, сегодня буду"
     )
     private val listFriendMessages = listOf(
-        "Ты сегодня выйдешь на смену?",
-        "Ждем тебя"
+        "Ты сегодня выйдешь на смену?", "Ждем тебя"
     )
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentChatBinding.inflate(inflater, container, false)
         return binding.root
@@ -51,14 +49,12 @@ class ChatFragment : Fragment() {
         (activity as MenuActivity?)?.setChatNotifications(0)
     }
 
-    private fun init(){
+    private fun init() {
         binding.apply {
             rvChat.adapter = adapter
-            ibMessageSend.setOnClickListener{
+            ibMessageSend.setOnClickListener {
                 val mes = ChatMessage(
-                    message = etMessage.text.toString(),
-                    senderId = null,
-                    receiverId = "1"
+                    message = etMessage.text.toString(), senderId = null, receiverId = "1"
                 )
                 adapter.addMessage(mes)
                 etMessage.text = null
@@ -68,12 +64,12 @@ class ChatFragment : Fragment() {
         }
     }
 
-    private fun hideKeyBoard(){
+    private fun hideKeyBoard() {
         val imm = requireActivity().getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(requireView().windowToken, 0)
     }
 
-    private fun setMessages(){
+    private fun setMessages() {
         binding.rvChat.layoutManager = LinearLayoutManager(context).apply {
             stackFromEnd = true
             reverseLayout = false
@@ -84,20 +80,16 @@ class ChatFragment : Fragment() {
         setFriendMessages()
     }
 
-    private fun setFriendMessages(){
+    private fun setFriendMessages() {
         val mes = ChatMessage(
-            message = listFriendMessages[index],
-            senderId = "1",
-            receiverId = null
+            message = listFriendMessages[index], senderId = "1", receiverId = null
         )
         adapter.addMessage(mes)
     }
 
-    private fun setMyMessages(){
+    private fun setMyMessages() {
         val mes = ChatMessage(
-            message = listMyMessages[0],
-            senderId = null,
-            receiverId = "1"
+            message = listMyMessages[0], senderId = null, receiverId = "1"
         )
         adapter.addMessage(mes)
     }
