@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.ui.main
+package com.example.logistics_assistant.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

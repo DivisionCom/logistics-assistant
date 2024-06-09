@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentProfileBinding
-import com.example.logistics_assistant.ui.main.MainViewModel
+import com.example.logistics_assistant.presentation.MainViewModel
 import com.example.logistics_assistant.ui.main.MenuActivity
 import com.example.logistics_assistant.ui.main.profile.statistics.StatisticsFragment
 

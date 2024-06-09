@@ -10,7 +10,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.logistics_assistant.ui.main.MainViewModel
+import com.example.logistics_assistant.presentation.MainViewModel
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentPasswordBinding
 import com.example.logistics_assistant.ui.main.MenuActivity

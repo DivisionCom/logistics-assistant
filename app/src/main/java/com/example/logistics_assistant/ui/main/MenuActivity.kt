@@ -1,9 +1,19 @@
 package com.example.logistics_assistant.ui.main
 
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -11,6 +21,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.ActivityMenuBinding
+import com.example.logistics_assistant.presentation.TasksViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,6 +29,23 @@ import dagger.hilt.android.AndroidEntryPoint
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
+
+    private lateinit var locationManager: LocationManager
+    private lateinit var locationListener: LocationListener
+
+    private val model: TasksViewModel by viewModels()
+
+    private var lastLocation: Location? = null
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        if (isGranted) {
+            getCurrentLocation()
+        } else {
+            Log.d("deblog", "Permission denied")
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +64,51 @@ class MenuActivity : AppCompatActivity() {
         setSupportActionBar(binding.myToolbar)
 
         setChatNotifications(3)
+
+        locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+        locationListener = object : LocationListener {
+            override fun onLocationChanged(location: Location) {
+                val lastLoc = lastLocation
+                if (lastLoc == null || location.distanceTo(lastLoc) > 10) {
+                    lastLocation = location
+                    model.updateLocation(location)
+                }
+            }
+
+            override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
+            override fun onProviderEnabled(provider: String) {}
+            override fun onProviderDisabled(provider: String) {}
+        }
+
+        checkLocationPermissionAndGetLocation()
+    }
+
+    private fun getCurrentLocation() {
+        try {
+            locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                5000L,  // Минимальное время в миллисекундах между обновлениями местоположения
+                10f,  // Минимальное расстояние в метрах между обновлениями местоположения
+                locationListener
+            )
+        } catch (e: SecurityException) {
+            Log.d("deblog", "SecurityException: ${e.message}")
+        }
+    }
+
+    private fun checkLocationPermissionAndGetLocation() {
+        when {
+            ContextCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED -> {
+                getCurrentLocation()
+            }
+
+            else -> {
+                requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+            }
+        }
     }
 
     private fun setSystemPaddings() {

@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.adapters.TasksAdapter
 import com.example.logistics_assistant.adapters.TasksVpAdapter
 import com.example.logistics_assistant.database.TasksModel
 import com.example.logistics_assistant.databinding.FragmentTasksBinding
-import com.example.logistics_assistant.ui.main.MainViewModel
+import com.example.logistics_assistant.presentation.MainViewModel
 import com.example.logistics_assistant.ui.main.MenuActivity
 import com.example.logistics_assistant.ui.main.chat.User
 import com.example.logistics_assistant.ui.main.tasks.pager.AtworkFragment

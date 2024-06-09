@@ -7,9 +7,12 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.example.logistics_assistant.R
 import com.example.logistics_assistant.databinding.FragmentStatisticsBinding
+import com.example.logistics_assistant.presentation.StatisticsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -35,10 +38,13 @@ class StatisticsFragment : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val currentMonth = getCurrentMonth()
-        statisticsViewModel.allTasks.observe(viewLifecycleOwner) { tasksList ->
-            completeCount = tasksList.count { it.isCompleted }
-            updateProgressBar(completeCount)
+        viewLifecycleOwner.lifecycleScope.launch {
+            statisticsViewModel.allTasks.collect { tasksList ->
+                completeCount = tasksList.count { it.isCompleted }
+                updateProgressBar(completeCount)
+            }
         }
+
     }
 
     private fun updateProgressBar(completedTasks: Int) {

@@ -1,4 +1,4 @@
-package com.example.logistics_assistant.ui.main.profile.statistics
+package com.example.logistics_assistant.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.logistics_assistant.database.StatisticsDao
 import com.example.logistics_assistant.database.StatisticsEntity
 import com.example.logistics_assistant.database.TasksDao
-import com.example.logistics_assistant.database.TasksModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,7 +16,7 @@ class StatisticsViewModel @Inject constructor(
     private val statisticsDao: StatisticsDao,
 ) : ViewModel() {
 
-    val allTasks: LiveData<List<TasksModel>> = tasksDao.getAllTasks()
+    val allTasks = tasksDao.getAllTasks()
 
     fun getStatisticsForMonth(month: String): LiveData<StatisticsEntity> {
         return statisticsDao.getStatisticsForMonth(month)

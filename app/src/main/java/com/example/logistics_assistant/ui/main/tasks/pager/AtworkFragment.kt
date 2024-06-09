@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.logistics_assistant.adapters.TasksAdapter
 import com.example.logistics_assistant.database.TasksModel
 import com.example.logistics_assistant.databinding.FragmentAtworkBinding
+import com.example.logistics_assistant.presentation.TasksViewModel
 import com.example.logistics_assistant.ui.main.tasks.TasksFragmentDirections
-import com.example.logistics_assistant.ui.main.tasks.TasksViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class AtworkFragment : Fragment(), TasksAdapter.OnItemClickListener {
@@ -35,28 +37,22 @@ class AtworkFragment : Fragment(), TasksAdapter.OnItemClickListener {
         observeTasks()
     }
 
+    private fun observeTasks() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            model.sortedTasks.collect { tasks ->
+                val updatedTasks = tasks.filter {
+                    it.status == "В работе"
+                }
+
+                adapter.submitList(updatedTasks)
+            }
+        }
+    }
+
     private fun initRv() = with(binding) {
         rvAtwork.layoutManager = LinearLayoutManager(activity)
         adapter = TasksAdapter(this@AtworkFragment)
         rvAtwork.adapter = adapter
-    }
-
-    private fun observeTasks() {
-        model.allTasks.observe(viewLifecycleOwner) { tasks ->
-            val updatedTasks = tasks.filter {
-                it.status == "В работе"
-//                val updatedTask = it.copy()
-//                when (updatedTask.taskNum) {
-//                    "Задание № 001" -> updatedTask.status = "Ожидает оплаты"
-//                    "Задание № 002" -> updatedTask.status = "Проверка"
-//                    "Задание № 003" -> updatedTask.status = "В процессе"
-//                    "Задание № 004" -> updatedTask.status = "Запланированные"
-//                }
-//                updatedTask
-            }
-
-            adapter.submitList(updatedTasks)
-        }
     }
 
     override fun onItemClick(task: TasksModel) {
